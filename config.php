@@ -4,7 +4,7 @@ session_start();
 $host = "mysql-2787dd40-mindrajit429-0740.c.aivencloud.com";
 $port = 25137;
 $user = "avnadmin";
-$pass = "AVNS_DG2R5gTVrGnPRELg6Fy";
+$pass = 'AVNS_pmiy6j2txqtFeSzurrE';
 $dbname = "defaultdb";
 
 $conn = mysqli_init();
