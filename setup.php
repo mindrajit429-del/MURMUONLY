@@ -8,8 +8,9 @@ $sql1 = "CREATE TABLE IF NOT EXISTS users (
     role VARCHAR(20) DEFAULT 'admin'
 )";
 
+// ডিফল্ট অ্যাডমিন অ্যাকাউন্ট (Username: admin | Password: admin123)
 $sql2 = "INSERT IGNORE INTO users (username, password, role) VALUES 
-('admin', '$2y$10$e0MYzXyjpJS7Pd0RVvHwHe.75r8A/rV/wM.V/sO/qA2C.9s6g/x.G', 'admin')";
+('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin')";
 
 $sql3 = "CREATE TABLE IF NOT EXISTS license_keys (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -24,7 +25,7 @@ $sql3 = "CREATE TABLE IF NOT EXISTS license_keys (
 )";
 
 if (mysqli_query($conn, $sql1) && mysqli_query($conn, $sql2) && mysqli_query($conn, $sql3)) {
-    echo "Database Tables Created Successfully! Username: admin | Password: password";
+    echo "Database Tables Created Successfully! Username: admin | Password: admin123";
 } else {
     echo "Error: " . mysqli_error($conn);
 }
